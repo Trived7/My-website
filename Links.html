@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en"> <!-- lang specifies what language the code is in -->
+<head>
+    <meta charset="utf-8">
+    <title>links.io</title>
+    <meta name="description" content="all my social links">
+    <meta name="author" content="trived">
+
+    <meta name="viewport" content="width=device-width", initial-scale="1.0">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">     <!-- related to font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>     <!-- same font related -->
+    
+    <link href="https://fonts.googleapis.com/css2?family=Marcellus&display=swap" rel="stylesheet">   <!-- this too font -->
+
+    <script src="https://kit.fontawesome.com/9282c9e049.js" crossorigin="anonymous"></script>   <!-- it is for the icons/ logo's for the buttons -->
+    
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <!--CSS code-->
+    <style>
+        .marcellus-regular {
+            font-family: "Marcellus", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        
+        @keyframes pulseGlow {
+            0%{
+                box-shadow: 0 0 10px rgba(0, 102, 255, 0.2);
+            }
+            50%{
+                box-shadow: 0 0 30px rgba(0, 102, 255, 0.6);
+            }
+            100%{
+                box-shadow: 0 0 10px rgba(0, 102, 255, 0.2);
+            }       
+        }
+        img{
+            max-width: 1000px;
+            height: 200px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 100px;
+            animation: pulseGlow 2s infinite;
+            transition: all 0.5s ease;
+        }
+        /*
+        img:hover{    <!-- related to imgae hover touch with mouse -->
+            animation: pulseGlow 2s infinite;
+        }
+        */
+
+        /* dark mode related css code stars here */
+        #modeToggle{
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 5px 10px;
+            background-color: #444;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            z-index: 999;
+        }
+        body.light-mode #modeToggle {
+            background-color: #ddd;
+            color: black;
+        }
+        /* light mode body */
+        body.light-mode{
+            background-color: #f0f0f0;
+            color: #111;
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        body.light-mode h1,
+        body.light-mode h2,
+        body.light-mode p{
+            color: #111;
+        }
+
+        /* glowing image animation for darkmode */
+        img:hover{
+            animation: pulseGlowDark 2s infinite;
+        }
+        @keyframes pulseGlowDark {
+            0% {box-shadow: 0 0 10px rgba(0, 102, 225, 0.2);}
+            50% {box-shadow: 0 0 30px rgba(0, 102,225, 0.6);}
+            100%{box-shadow: 0 0 10px rgba(0, 102, 225, 0.2);}
+        }
+
+        /* glowing image image animation for dark mode */
+        body.light-mode img:hover{
+            animation: pulseGlowlight 2s infinite !important;
+        }
+        @keyframes pulseGlowlight{
+            0%{box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);}
+            50%{box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);}
+            100%{box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);}
+        }
+        body{
+            background-color: rgb(26, 26, 25);
+            transition: background-color 0.5s ease, color 0.5s ease;
+        }
+        h1{
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+            font-size: 35px;
+            color: aliceblue;
+            margin-top: 50px;
+            transition: all 0.5s ease;
+        }
+        h2{
+            text-align: center;
+            padding: 2px;
+            color: aliceblue;
+            transition: all 0.5s ease;
+        }
+    a {
+        display: inline-block;
+        color: rgb(250, 244, 244);
+        text-decoration: none;
+        border-radius: 5px;
+        padding: 10px 30px;
+        background-color: rgb(37, 37, 228);
+        margin: 5px 0px;
+        width: 130px;
+        text-align: center;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+    a:hover {
+        box-shadow: 0 0 20px rgba(199, 212, 239, 0.5);
+    }
+
+        .link-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+    }
+    a:hover {
+        background-color: rgb(11, 11, 160);
+    }
+    a:hover svg{
+    background-color: rgb(12, 12, 161);
+    }
+    svg{
+        width: 20px;
+        height: 19px;
+        vertical-align: middle;
+        margin-right: 1px;
+    }
+    p {
+        text-align: center;
+        color: aliceblue;
+        transition: all 0.5s ease;
+    }
+    @media (max-width: 768px){
+        img {
+            width: 80%;
+            height: auto;
+        }
+        .link-container a {
+            width: 100%;
+            padding: 12px;
+            text-align: left;
+            transition: all 0.5s ease;
+        }
+        p {
+            font-size: 16px;
+        }
+    @media (max-width: 480px) {
+        h1{
+            font-size: 20px;
+        }
+        img {
+            width: 90%;
+        }
+        a {
+            padding: 10px 20px;
+        }
+        p{
+            font-size: 14px;
+        }
+    }    
+    }
+    html {
+        scroll-behavior: smooth;
+    }
+    h1, h2, p {
+    transition: color 0.5s ease 0.1s;
+    }
+    footer{
+        text-align: center;
+        font-size: 14px;
+        opacity: 0.6;
+        padding: 20px;
+        color: aliceblue;
+        background-color: rgb(18, 18, 18);
+        transition: background-color 0.5s ease, color 0.5s ease, opacity 0.5s ease;
+    }
+    body.light-mode footer{
+        background-color: #f0f0f0;
+        color: #111;
+    }
+    </style>
+    
+</head>
+<body>
+    <button id="modeToggle">🌙 Toggle Mode</button>
+    <img src="https://i.imgur.com/TIOX9bq.jpeg" alt="profile image">
+    <h1 class="marcellus-regular">Trived</h1>
+    <h2 class="marcellus-regular">Hello! 
+        <br>
+        A  bit about me </h2>
+    <p class="marcellus-regular"> I am a self-taught Coder from India. I love watching Anime and reading Manga, Novels & books in my free time. 
+        <br>I like building cool things online. This website is my little corner where you can find all my social links!👇</p>
+    <p class="marcellus-regular">
+    Currently-I'm learning web development and planning to build mini tools and personal projects.
+    <br>
+    I'm also open to collaborating on fun coding ideas!
+    </p>    
+        
+    <div class="link-container"> <!-- it is used for the certain operations flex operations here for this code -->
+    <a href="https://github.com/Trived7" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-github"></i> Github</a><br> 
+    <a href="https://www.reddit.com/user/Anime-Man-1432/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-reddit"></i> Reddit</a><br>
+    <a href="https://anilist.co/user/Trived7/" target="_blank" rel="noopener noreferrer">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <title>AniList</title><path d="M24 17.53v2.421c0 .71-.391 1.101-1.1 1.101h-5l-.057-.165L11.84 3.736c.106-.502.46-.788 1.053-.788h2.422c.71 0 1.1.391 1.1 1.1v12.38H22.9c.71 0 1.1.392 1.1 1.101zM11.034 2.947l6.337 18.104h-4.918l-1.052-3.131H6.019l-1.077 3.131H0L6.361 2.948h4.673zm-.66 10.96-1.69-5.014-1.541 5.015h3.23z"/></svg> 
+            Anilist</a><br>
+    <a href="https://letterboxd.com/trived_14125/" target="_blank" rel="noopener noreferrer">
+        <i class="fa-brands fa-letterboxd"></i> letterboxd</a><br>
+    <a href="https://myanimelist.net/profile/Monkey_D_trived" target="_blank" rel="noopener noreferrer">
+        <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <title>MyAnimeList</title><path d="M8.273 7.247v8.423l-2.103-.003v-5.216l-2.03 2.404-1.989-2.458-.02 5.285H.001L0 7.247h2.203l1.865 2.545 2.015-2.546 2.19.001zm8.628 2.069l.025 6.335h-2.365l-.008-2.871h-2.8c.07.499.21 1.266.417 1.779.155.381.298.751.583 1.128l-1.705 1.125c-.349-.636-.622-1.337-.878-2.082a9.296 9.296 0 0 1-.507-2.179c-.085-.75-.097-1.471.107-2.212a3.908 3.908 0 0 1 1.161-1.866c.313-.293.749-.5 1.1-.687.351-.187.743-.264 1.107-.359a7.405 7.405 0 0 1 1.191-.183c.398-.034 1.107-.066 2.39-.028l.545 1.749H14.51c-.593.008-.878.001-1.341.209a2.236 2.236 0 0 0-1.278 1.92l2.663.033.038-1.81h2.309zm3.992-2.099v6.627l3.107.032-.43 1.775h-4.807V7.187l2.13.03z"/></svg>
+         MyAnimeList</a><br>
+    </div>
+    <p class="marcellus-regular">You Can Contact Me Here ;)</p>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+        document.getElementById("year").textContent = new Date().getFullYear();
+    
+
+        const togglebutton = document.getElementById('modeToggle');
+        togglebutton.addEventListener('click',()=> {
+            document.body.classList.toggle('light-mode');    
+        });
+        });    
+    </script>
+    <footer class="marcellus-regular">
+    © Trived <span id="year"></span>
+    </footer>
+</body>
+</html>
